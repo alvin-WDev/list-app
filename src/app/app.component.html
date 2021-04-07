@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <label class="label">SORTING APP</label>
+      <input #myitem type="text" class="form-control" [placeholder]="CreateItem">
+      <button class="add-btn" (click)="onclick(myitem)" class="btn btn-success mt-3">Add</button>
+      <button (click)="send()" class="btn btn-info mt-3">Sort</button>
+      <table class="table table-bordered mt-3">
+        <thead class="thead-light">
+          <tr>
+            <th>Item Name</th>
+            <th>Delte Item</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of itemlist">
+            <td>{{item}}</td>
+            <td>
+              <button (click)="ondelete(item)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>
